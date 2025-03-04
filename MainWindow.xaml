@@ -16,9 +16,9 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Button Content="Zapisz" Width="100" Height="50" Margin="26,10,0,10" FontSize="25" HorizontalAlignment="Left"></Button>
-        <Button Width="100" Height="50" Margin="0,10,0,10" FontSize="25" HorizontalAlignment="Center" Content="Wczytaj"/>
-        <DataGrid Grid.Row="1" HorizontalAlignment="Center">
+        <Button x:Name="saveButton" Click="saveButton_Click" Content="Zapisz" Width="100" Height="50" Margin="26,10,0,10" FontSize="25" HorizontalAlignment="Left"></Button>
+        <Button x:Name="loadButton" Click="loadButton_Click" Width="100" Height="50" Margin="0,10,0,10" FontSize="25" HorizontalAlignment="Center" Content="Wczytaj"/>
+        <DataGrid x:Name="dataGrid"  Grid.Row="1" HorizontalAlignment="Center" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"  Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Imię" Binding="{Binding FirstName}" />
